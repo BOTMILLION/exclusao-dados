@@ -15,7 +15,7 @@
       align-items: center;
       min-height: 100vh;
       background: url('https://i.imgur.com/vh64KXu.png') no-repeat center center;
-      background-size: cover;
+      background-size: contain; /* Ajuste a imagem para caber inteira */
       text-align: center;
     }
     .container {
@@ -71,13 +71,22 @@
     <p>Se precisar de qualquer ajuda ou tiver dúvidas, não hesite em nos contatar.</p>
     <p>Aproveite a experiência e boa sorte!</p>
     <p>Equipe Apostador Prime</p>
-    <p class="redirect-message">Você será redirecionado para a tela de login em 7 segundos...</p>
+    <p class="redirect-message">Você será redirecionado para a tela de login em <span id="countdown">10</span> segundos...</p>
     <a href="https://botmillion.github.io/testeaposta/" class="redirect-button">IR AGORA</a>
   </div>
   <script>
-    setTimeout(function() {
-      window.location.href = "https://botmillion.github.io/testeaposta/";
-    }, 7000);
+    let countdownElement = document.getElementById('countdown');
+    let countdown = 10;
+
+    setInterval(function() {
+      countdown--;
+      if (countdown >= 0) {
+        countdownElement.textContent = countdown;
+      }
+      if (countdown === 0) {
+        window.location.href = "https://botmillion.github.io/testeaposta/";
+      }
+    }, 1000);
   </script>
 </body>
 </html>

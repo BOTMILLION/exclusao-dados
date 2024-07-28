@@ -15,8 +15,14 @@
       align-items: center;
       min-height: 100vh;
       background: url('https://i.imgur.com/vh64KXu.png') no-repeat center center;
-      background-size: contain; /* Ajuste a imagem para caber inteira */
+      background-size: cover;
       text-align: center;
+    }
+    @media only screen and (max-width: 768px) {
+      body {
+        background: url('https://i.imgur.com/9hHl8Za.png') no-repeat center center;
+        background-size: cover;
+      }
     }
     .container {
       background: rgba(0, 0, 0, 0.7);

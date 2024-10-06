@@ -1,100 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confirmação de Pagamento</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #FFFFFF;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: url('https://i.imgur.com/vh64KXu.png') no-repeat center center;
-      background-size: cover;
-      text-align: center;
-      background-color: #000000; /* Cor de fundo preto como fallback */
-    }
-    @media only screen and (max-width: 768px) {
-      body {
-        background: url('https://i.imgur.com/OtI3IUR.png') no-repeat center center;
-        background-size: contain; /* Contain para ajustar a largura */
-        background-color: #000000; /* Cor de fundo preto */
-      }
-    }
-    .container {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 80px;
-      border-radius: 10px;
-      max-width: 600px;
-      width: 90%;
-    }
-    .logo img {
-      max-width: 200px;
-      width: 100%;
-      margin-bottom: -50px;
-    }
-    h1 {
-      color: #ff0000; /* Cor vermelha da logo */
-      font-size: 2.2em;
-      font-weight: 600;
-      letter-spacing: 6px;
-    }
-    p {
-      color: #FFFFFF;
-      font-size: 1.2em;
-      font-weight: 400;
-      line-height: 1.5em;
-    }
-    .redirect-message {
-      margin-top: 20px;
-      font-size: 1em;
-    }
-    .redirect-button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #2FA871;
-      color: #FFFFFF;
-      text-decoration: none;
-      font-size: 1em;
-      border-radius: 5px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusão de Dados do Usuário</title>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">
-      <img src="https://i.imgur.com/Zi0Ece1.png" alt="Logo">
-    </div>
-    <h1>PEDIDO CONCLUÍDO!</h1>
-    <p>Obrigado pelo seu pagamento!</p>
-    <p>Bem-vindo(a) à nossa comunidade premium!</p>
-    <p>Detalhes do Pagamento:</p>
-    <p>Agora você tem acesso total aos nossos recursos sem limitação.</p>
-    <p>Se precisar de qualquer ajuda ou tiver dúvidas, não hesite em nos contatar.</p>
-    <p>Aproveite a experiência e boa sorte!</p>
-    <p>Equipe Apostador Prime</p>
-    <p class="redirect-message">Você será redirecionado para a tela de login em <span id="countdown">10</span> segundos...</p>
-    <a href="https://botmillion.github.io/testeaposta/" class="redirect-button">IR AGORA</a>
-  </div>
-  <script>
-    let countdownElement = document.getElementById('countdown');
-    let countdown = 10;
-
-    setInterval(function() {
-      countdown--;
-      if (countdown >= 0) {
-        countdownElement.textContent = countdown;
-      }
-      if (countdown === 0) {
-        window.location.href = "https://botmillion.github.io/testeaposta/";
-      }
-    }, 1000);
-  </script>
+    <h1>Exclusão de Dados do Usuário</h1>
+    <p>Para solicitar a exclusão de seus dados, entre em contato conosco pelo e-mail: <a href="mailto:silvadaniit09@gmail.com">silvadaniit09@gmail.com</a>.</p>
+    <p>Nosso compromisso é respeitar sua privacidade e garantir a segurança de suas informações.</p>
 </body>
 </html>

@@ -11,11 +11,12 @@
       padding: 0;
       box-sizing: border-box;
     }
-
+    
     /* Estilos da página */
     body {
       font-family: Arial, sans-serif;
       color: #333;
+      background-color: #f9f9f9;
     }
 
     /* Cabeçalho */
@@ -25,7 +26,7 @@
       padding: 1rem;
       text-align: center;
     }
-    
+
     /* Seção Hero */
     .hero {
       display: flex;
@@ -34,16 +35,19 @@
       padding: 3rem 1rem;
       background: url('https://i.imgur.com/sample-airfryer.jpg') center/cover no-repeat;
       color: #fff;
+      text-align: center;
     }
-    
+
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
     }
 
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
     }
 
     .hero button {
@@ -60,39 +64,97 @@
       background: #cc0000;
     }
 
-    /* Descrição do produto */
-    .product-description {
+    /* Seção Descrição */
+    .product-description, .guarantee, .feedback {
       padding: 2rem 1rem;
       text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    .product-description h2 {
-      font-size: 2rem;
+    .product-description h2, .feedback h2, .guarantee h2 {
+      font-size: 2.5rem;
       color: #ff0000;
       margin-bottom: 1rem;
     }
 
-    .product-description p {
+    .product-description p, .feedback p, .guarantee p {
       font-size: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       color: #555;
+    }
+
+    /* Seção Características do Produto */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .feature-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      width: 180px;
+    }
+
+    .feature-item img {
+      max-width: 60px;
+      margin-bottom: 1rem;
+    }
+
+    /* Seção Feedback */
+    .feedback {
+      background: #f4f4f4;
+      margin-top: 2rem;
+      padding: 2rem;
+      border-radius: 8px;
+    }
+
+    .testimonial {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial h3 {
+      color: #ff0000;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
     }
 
     /* Garantia */
     .guarantee {
-      background: #f4f4f4;
-      padding: 2rem 1rem;
-      text-align: center;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border-radius: 8px;
     }
 
-    .guarantee h2 {
-      font-size: 1.8rem;
-      color: #000;
+    /* Botões */
+    .cta-button {
+      background-color: #ff0000;
+      color: #fff;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: block;
+      margin: 1rem auto;
+      text-decoration: none;
     }
 
-    .guarantee p {
-      margin-top: 1rem;
-      color: #555;
+    .cta-button:hover {
+      background-color: #cc0000;
     }
 
     /* Rodapé */
@@ -109,33 +171,63 @@
 
   <!-- Cabeçalho -->
   <header>
-    <h1>Super Promoção de Black Friday!</h1>
+    <h1>Promoção Black Friday Air Fryer!</h1>
   </header>
 
   <!-- Seção Hero -->
   <section class="hero">
     <h1>Air Fryer por Apenas R$80</h1>
-    <p>Aproveite a Black Friday com Frete Grátis para todo o Brasil! Oferta limitada.</p>
-    <button>Compre Agora</button>
+    <p>Aproveite a oferta de Black Friday com Frete Grátis para todo o Brasil! Válido enquanto durarem os estoques.</p>
+    <a href="#comprar" class="cta-button">Quero Garantir a Minha!</a>
   </section>
 
   <!-- Descrição do Produto -->
-  <section class="product-description">
-    <h2>Air Fryer - Rápida e Saudável</h2>
-    <p>Prepare suas comidas favoritas de maneira saudável e sem óleo! Design moderno, capacidade para toda a família, e de fácil limpeza.</p>
-    <h3>Características:</h3>
-    <ul>
-      <li>Capacidade de 3.5 litros</li>
-      <li>Função timer e controle de temperatura</li>
-      <li>Baixo consumo de energia</li>
-      <li>Material antiaderente de fácil limpeza</li>
-    </ul>
+  <section class="product-description" id="comprar">
+    <h2>Air Fryer - Prepare suas Refeições de Forma Saudável</h2>
+    <p>Chegou a hora de ter uma alimentação mais saudável e prática com nossa Air Fryer moderna e eficiente!</p>
+    <div class="features">
+      <div class="feature-item">
+        <img src="https://i.imgur.com/KHQEjMd.png" alt="Capacidade 3.5L">
+        <p>Capacidade de 3.5 Litros</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://i.imgur.com/2sPvzXd.png" alt="Timer">
+        <p>Função Timer Inteligente</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://i.imgur.com/sdI2nTQ.png" alt="Temperatura">
+        <p>Controle de Temperatura</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://i.imgur.com/tSkVZWw.png" alt="Antiaderente">
+        <p>Material Antiaderente</p>
+      </div>
+    </div>
+    <a href="#comprar" class="cta-button">Compre Agora por R$80</a>
   </section>
 
-  <!-- Garantia -->
+  <!-- Feedback dos Clientes -->
+  <section class="feedback">
+    <h2>O Que Nossos Clientes Dizem</h2>
+    <div class="testimonial">
+      <h3>Mariana Souza</h3>
+      <p>"Melhor compra que já fiz! A Air Fryer chegou rápido e é muito prática. Uso todos os dias!"</p>
+    </div>
+    <div class="testimonial">
+      <h3>Paulo Andrade</h3>
+      <p>"Excelente custo-benefício. Nunca imaginei pagar tão barato por um produto de qualidade!"</p>
+    </div>
+    <div class="testimonial">
+      <h3>Fernanda Lima</h3>
+      <p>"Frete grátis e preço ótimo. Cozinhar ficou muito mais fácil. Recomendo!"</p>
+    </div>
+  </section>
+
+  <!-- Garantia de Satisfação -->
   <section class="guarantee">
     <h2>Garantia de Satisfação</h2>
-    <p>Compre com segurança! Caso não fique satisfeito, garantimos a devolução em até 30 dias.</p>
+    <p>Compre com segurança! Caso não fique satisfeito, garantimos a devolução em até 30 dias após a compra.</p>
+    <a href="#comprar" class="cta-button">Garanta a Sua Air Fryer Agora</a>
   </section>
 
   <!-- Rodapé -->

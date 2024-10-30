@@ -1,239 +1,119 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Black Friday Air Fryer - Super Promoção!</title>
-  <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    /* Estilos da página */
-    body {
-      font-family: Arial, sans-serif;
-      color: #333;
-      background-color: #f9f9f9;
-    }
-
-    /* Cabeçalho */
-    header {
-      background: #000;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    /* Seção Hero */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 3rem 1rem;
-      background: url('https://i.imgur.com/sample-airfryer.jpg') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-    }
-
-    .hero button {
-      background: #ff0000;
-      color: #fff;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .hero button:hover {
-      background: #cc0000;
-    }
-
-    /* Seção Descrição */
-    .product-description, .guarantee, .feedback {
-      padding: 2rem 1rem;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .product-description h2, .feedback h2, .guarantee h2 {
-      font-size: 2.5rem;
-      color: #ff0000;
-      margin-bottom: 1rem;
-    }
-
-    .product-description p, .feedback p, .guarantee p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      color: #555;
-    }
-
-    /* Seção Características do Produto */
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .feature-item {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1rem;
-      text-align: center;
-      width: 180px;
-    }
-
-    .feature-item img {
-      max-width: 60px;
-      margin-bottom: 1rem;
-    }
-
-    /* Seção Feedback */
-    .feedback {
-      background: #f4f4f4;
-      margin-top: 2rem;
-      padding: 2rem;
-      border-radius: 8px;
-    }
-
-    .testimonial {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    .testimonial h3 {
-      color: #ff0000;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Garantia */
-    .guarantee {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 1.5rem;
-      margin-top: 2rem;
-      border-radius: 8px;
-    }
-
-    /* Botões */
-    .cta-button {
-      background-color: #ff0000;
-      color: #fff;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-      display: block;
-      margin: 1rem auto;
-      text-decoration: none;
-    }
-
-    .cta-button:hover {
-      background-color: #cc0000;
-    }
-
-    /* Rodapé */
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
+  <script src="https://kit.fontawesome.com/cab42dffd7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png">
+  <title>Caju - Black Friday</title>
 </head>
-<body>
 
-  <!-- Cabeçalho -->
+<body onload="countdown()">
   <header>
-    <h1>Promoção Black Friday Air Fryer!</h1>
+    <img src="assets/logo-caju.png" alt="Logo da Caju" />
   </header>
 
-  <!-- Seção Hero -->
-  <section class="hero">
-    <h1>Air Fryer por Apenas R$80</h1>
-    <p>Aproveite a oferta de Black Friday com Frete Grátis para todo o Brasil! Válido enquanto durarem os estoques.</p>
-    <a href="#comprar" class="cta-button">Quero Garantir a Minha!</a>
-  </section>
+  <div class="message-container">
+    <p>O sabor do Piauí com o menor preço.</p>
+  </div>
 
-  <!-- Descrição do Produto -->
-  <section class="product-description" id="comprar">
-    <h2>Air Fryer - Prepare suas Refeições de Forma Saudável</h2>
-    <p>Chegou a hora de ter uma alimentação mais saudável e prática com nossa Air Fryer moderna e eficiente!</p>
-    <div class="features">
-      <div class="feature-item">
-        <img src="https://i.imgur.com/KHQEjMd.png" alt="Capacidade 3.5L">
-        <p>Capacidade de 3.5 Litros</p>
-      </div>
-      <div class="feature-item">
-        <img src="https://i.imgur.com/2sPvzXd.png" alt="Timer">
-        <p>Função Timer Inteligente</p>
-      </div>
-      <div class="feature-item">
-        <img src="https://i.imgur.com/sdI2nTQ.png" alt="Temperatura">
-        <p>Controle de Temperatura</p>
-      </div>
-      <div class="feature-item">
-        <img src="https://i.imgur.com/tSkVZWw.png" alt="Antiaderente">
-        <p>Material Antiaderente</p>
-      </div>
-    </div>
-    <a href="#comprar" class="cta-button">Compre Agora por R$80</a>
-  </section>
+  <section class="section-container section-one">
+    <div class="content-left">
+      <h1 class="content-left__badge">BLACK FRIDAY</h1>
+      <div>
+        <ul class="countdown">
+          <li>
+            <div id="days" class="number">00</div>
+            <div class="countdown__label">Dias</div>
+          </li>
 
-  <!-- Feedback dos Clientes -->
-  <section class="feedback">
-    <h2>O Que Nossos Clientes Dizem</h2>
-    <div class="testimonial">
-      <h3>Mariana Souza</h3>
-      <p>"Melhor compra que já fiz! A Air Fryer chegou rápido e é muito prática. Uso todos os dias!"</p>
+          <li>
+            <div id="hours" class="number">00</div>
+            <div class="countdown__label">Horas</div>
+          </li>
+
+          <li>
+            <div id="minutes" class="number">00</div>
+            <div class="countdown__label">Minutos</div>
+          </li>
+
+          <li>
+            <div id="seconds" class="number">00</div>
+            <div class="countdown__label">Segundos</div>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="testimonial">
-      <h3>Paulo Andrade</h3>
-      <p>"Excelente custo-benefício. Nunca imaginei pagar tão barato por um produto de qualidade!"</p>
-    </div>
-    <div class="testimonial">
-      <h3>Fernanda Lima</h3>
-      <p>"Frete grátis e preço ótimo. Cozinhar ficou muito mais fácil. Recomendo!"</p>
+
+    <div class="content-right" id="content-right">
+      <form action="" id="form" class="form" autocomplete="off">
+        <p class="form__title">Cadastre-se para saber o que estamos preparando antes de todo mundo!</p>
+        <input type="text" placeholder="Nome" id="name" class="input" required>
+        <input type="email" placeholder="E-mail" id="email" class="input" required>
+        <input type="submit" value="Cadastrar" class="input input--submit">
+      </form>
     </div>
   </section>
 
-  <!-- Garantia de Satisfação -->
-  <section class="guarantee">
-    <h2>Garantia de Satisfação</h2>
-    <p>Compre com segurança! Caso não fique satisfeito, garantimos a devolução em até 30 dias após a compra.</p>
-    <a href="#comprar" class="cta-button">Garanta a Sua Air Fryer Agora</a>
+  <div class="message-container">
+    <p>Temos a melhor seleção de produtos para você!</p>
+  </div>
+
+  <section class="section-container section-two">
+    <div class="cards-container">
+      <div class="card">
+        <img src="assets/berrio-lata.png" alt="Cerveja Berrió do Piauí em lata">
+        <div class="card__title">
+          <h4>Berrió <br> do Piauí</h4>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/cajuina-brasucos.png" alt="Cajuína Brasucos">
+        <div class="card__title">
+          <h4>Cajuína <br> Brasucos</h4>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/castanha1.png" alt="Castanha de Caju">
+        <div class="card__title">
+          <h4>Castanha de caju <br> Bom Sabor</h4>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/castanha2.png" alt="Castanha de Caju Caramelizada">
+        <div class="card__title">
+          <h4>Castanha de caju caramelizada Bom Sabor</h4>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2024 Black Friday Promoções. Todos os direitos reservados.</p>
+  <footer class="footer">
+    <p class="footer__text">© Todos os direitos reservados.</p>
+    <p class="footer__text">Desenvolvido por <span class="orange">Lohanna Aires</span></p>
+    <div class="social-container">
+      <a href="https://github.com/lohannaaires" target="_blank" class="social-container__item">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/lohannaaires/" target="_blank" class="social-container__item">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="https://discordapp.com/users/561943411049889798/" target="_blank" class="social-container__item">
+        <i class="fab fa-discord fa-2x"></i>
+      </a>
+      </a>
+    </div>
   </footer>
 
 </body>
+
+<script src="js/script.js"></script>
+<script src="js/countdown.js"></script>
+
 </html>
